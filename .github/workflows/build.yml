@@ -99,6 +99,9 @@ jobs:
           echo "--- extracted tree ---"
           ls -R
 
+      - name: Install ldid
+        run: brew install ldid || brew install xerub/ldid/ldid
+
       - name: Install Theos (roothide) + iOS SDK
         run: |
           set -e
